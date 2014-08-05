@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="TestView">
+        <attr name="textColor" format="color"></attr>
+        <attr name="textSize" format="dimension"></attr>
+        <attr name="imgBackground" format="integer"></attr>
+        <attr name="topBorder" format="boolean"></attr>
+        <attr name="bottomBorder" format="boolean"></attr>
+        <attr name="leftBorder" format="boolean"></attr>
+        <attr name="rightBorder" format="boolean"></attr>
+    </declare-styleable>
+
+</resources>

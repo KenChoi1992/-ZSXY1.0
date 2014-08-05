@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer-array name = "Monday"></integer-array>
+    <integer-array name = "Tuesday"></integer-array>
+    <integer-array name = "Wednesday"></integer-array>
+    <integer-array name = "Thursday"></integer-array>
+    <integer-array name = "Friday"></integer-array>
+    <integer-array name = "Saturday"></integer-array>
+    <integer-array name = "Sunday"></integer-array>
+    
+</resources>

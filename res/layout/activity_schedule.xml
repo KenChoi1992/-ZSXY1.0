@@ -1,0 +1,898 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:myView="http://schemas.android.com/apk/res/com.zsxy_schedule"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/user"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@color/zsxyBlue" >
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/eight"
+            android:paddingRight="10dp"
+            android:src="@drawable/u34" />
+
+        <Spinner
+            android:id="@+id/spinner1"
+            android:layout_width="105dp"
+            android:layout_height="35dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/spinner_selector"
+            android:gravity="center" />
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:contentDescription="@string/eight"
+            android:src="@drawable/u14" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/scheduleInit"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible" >
+
+        <ImageView
+            android:id="@+id/addSchedule"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@drawable/people_1"
+            android:contentDescription="@string/eight"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/schedule"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fadingEdge="vertical"
+        android:scrollbars="vertical"
+        android:visibility="gone" >
+
+        <LinearLayout
+            android:id="@+id/all"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <com.zsxy.controls.ZsxyTextView
+                    android:id="@+id/month"
+                    android:layout_width="@dimen/month_width"
+                    android:layout_height="@dimen/month_height"
+                    android:gravity="center" />
+
+                <com.zsxy.controls.ZsxyTextView
+                    android:id="@+id/week1"
+                    android:layout_width="@dimen/weeks_width"
+                    android:layout_height="@dimen/weeks_height"
+                    android:layout_weight="1.0"
+                    android:gravity="center"
+                    android:text="@string/mon" />
+
+                <com.zsxy.controls.ZsxyTextView
+                    android:id="@+id/week2"
+                    android:layout_width="@dimen/weeks_width"
+                    android:layout_height="@dimen/weeks_height"
+                    android:layout_weight="1.0"
+                    android:gravity="center"
+                    android:text="@string/tue" />
+
+                <com.zsxy.controls.ZsxyTextView
+                    android:id="@+id/week3"
+                    android:layout_width="@dimen/weeks_width"
+                    android:layout_height="@dimen/weeks_height"
+                    android:layout_weight="1.0"
+                    android:gravity="center"
+                    android:text="@string/web" />
+
+                <com.zsxy.controls.ZsxyTextView
+                    android:id="@+id/week4"
+                    android:layout_width="@dimen/weeks_width"
+                    android:layout_height="@dimen/weeks_height"
+                    android:layout_weight="1.0"
+                    android:gravity="center"
+                    android:text="@string/thu" />
+
+                <com.zsxy.controls.ZsxyTextView
+                    android:id="@+id/week5"
+                    android:layout_width="@dimen/weeks_width"
+                    android:layout_height="@dimen/weeks_height"
+                    android:layout_weight="1.0"
+                    android:gravity="center"
+                    android:text="@string/fri" />
+
+                <com.zsxy.controls.ZsxyTextView
+                    android:id="@+id/week6"
+                    android:layout_width="@dimen/weeks_width"
+                    android:layout_height="@dimen/weeks_height"
+                    android:layout_weight="1.0"
+                    android:gravity="center"
+                    android:text="@string/sat" />
+
+                <com.zsxy.controls.ZsxyTextView
+                    android:id="@+id/week7"
+                    android:layout_width="@dimen/weeks_width"
+                    android:layout_height="@dimen/weeks_height"
+                    android:layout_weight="1.0"
+                    android:gravity="center"
+                    android:text="@string/sun" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/courses"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:id="@+id/serialLayout"
+                    android:layout_width="@dimen/serialNum_width"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <com.zsxy.controls.ZsxyTextView
+                        android:id="@+id/serial1"
+                        android:layout_width="@dimen/serialNum_width"
+                        android:layout_height="@dimen/serialNum_height"
+                        android:layout_weight="1.0"
+                        android:gravity="center"
+                        android:text="@string/one" />
+
+                    <com.zsxy.controls.ZsxyTextView
+                        android:id="@+id/serial2"
+                        android:layout_width="@dimen/serialNum_width"
+                        android:layout_height="@dimen/serialNum_height"
+                        android:layout_weight="1.0"
+                        android:gravity="center"
+                        android:text="@string/two" />
+
+                    <com.zsxy.controls.ZsxyTextView
+                        android:id="@+id/serial3"
+                        android:layout_width="@dimen/serialNum_width"
+                        android:layout_height="@dimen/serialNum_height"
+                        android:layout_weight="1.0"
+                        android:gravity="center"
+                        android:text="@string/three" />
+
+                    <com.zsxy.controls.ZsxyTextView
+                        android:id="@+id/serial4"
+                        android:layout_width="@dimen/serialNum_width"
+                        android:layout_height="@dimen/serialNum_height"
+                        android:layout_weight="1.0"
+                        android:gravity="center"
+                        android:text="@string/four" />
+
+                    <com.zsxy.controls.ZsxyTextView
+                        android:id="@+id/serial5"
+                        android:layout_width="@dimen/serialNum_width"
+                        android:layout_height="@dimen/serialNum_height"
+                        android:layout_weight="1.0"
+                        android:gravity="center"
+                        android:text="@string/five" />
+
+                    <com.zsxy.controls.ZsxyTextView
+                        android:id="@+id/serial6"
+                        android:layout_width="@dimen/serialNum_width"
+                        android:layout_height="@dimen/serialNum_height"
+                        android:layout_weight="1.0"
+                        android:gravity="center"
+                        android:text="@string/six" />
+
+                    <com.zsxy.controls.ZsxyTextView
+                        android:id="@+id/serial7"
+                        android:layout_width="@dimen/serialNum_width"
+                        android:layout_height="@dimen/serialNum_height"
+                        android:layout_weight="1.0"
+                        android:gravity="center"
+                        android:text="@string/seven" />
+
+                    <com.zsxy.controls.ZsxyTextView
+                        android:id="@+id/serial8"
+                        android:layout_width="@dimen/serialNum_width"
+                        android:layout_height="@dimen/serialNum_height"
+                        android:layout_weight="1.0"
+                        android:gravity="center"
+                        android:text="@string/eight" />
+
+                    <com.zsxy.controls.ZsxyTextView
+                        android:id="@+id/serial9"
+                        android:layout_width="@dimen/serialNum_width"
+                        android:layout_height="@dimen/serialNum_height"
+                        android:layout_weight="1.0"
+                        android:gravity="center"
+                        android:text="@string/nine" />
+
+                    <com.zsxy.controls.ZsxyTextView
+                        android:id="@+id/serial10"
+                        android:layout_width="@dimen/serialNum_width"
+                        android:layout_height="@dimen/serialNum_height"
+                        android:layout_weight="1.0"
+                        android:gravity="center"
+                        android:text="@string/ten" />
+
+                    <com.zsxy.controls.ZsxyTextView
+                        android:id="@+id/serial11"
+                        android:layout_width="@dimen/serialNum_width"
+                        android:layout_height="@dimen/serialNum_height"
+                        android:layout_weight="1.0"
+                        android:gravity="center"
+                        android:text="@string/eleven" />
+
+                    <com.zsxy.controls.ZsxyTextView
+                        android:id="@+id/serial12"
+                        android:layout_width="@dimen/serialNum_width"
+                        android:layout_height="@dimen/serialNum_height"
+                        android:layout_weight="1.0"
+                        android:gravity="center"
+                        android:text="@string/twelve" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/monLayout"
+                    android:layout_width="@dimen/weeks_width"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:orientation="vertical" >
+
+                    <com.zsxy.controls.ZsxyTextView
+                        android:id="@+id/mon1"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/course_height"
+                        android:layout_weight="1.0"
+                        android:gravity="center" />
+
+                    <com.zsxy.controls.ZsxyTextView
+                        android:id="@+id/mon2"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/course_height"
+                        android:layout_weight="1.0"
+                        android:gravity="center" />
+
+                    <com.zsxy.controls.ZsxyTextView
+                        android:id="@+id/mon3"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/course_height"
+                        android:layout_weight="1.0"
+                        android:gravity="center" />
+
+                    <com.zsxy.controls.ZsxyTextView
+                        android:id="@+id/mon4"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/course_height"
+                        android:layout_weight="1.0"
+                        android:gravity="center" />
+
+                    <com.zsxy.controls.ZsxyTextView
+                        android:id="@+id/mon5"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/course_height"
+                        android:layout_weight="1.0"
+                        android:gravity="center" />
+
+                    <com.zsxy.controls.ZsxyTextView
+                        android:id="@+id/mon6"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/course_height"
+                        android:layout_weight="1.0"
+                        android:gravity="center" />
+
+                    <com.zsxy.controls.ZsxyTextView
+                        android:id="@+id/mon7"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/course_height"
+                        android:layout_weight="1.0"
+                        android:gravity="center" />
+
+                    <com.zsxy.controls.ZsxyTextView
+                        android:id="@+id/mon8"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/course_height"
+                        android:layout_weight="1.0"
+                        android:gravity="center" />
+
+                    <com.zsxy.controls.ZsxyTextView
+                        android:id="@+id/mon9"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/course_height"
+                        android:layout_weight="1.0"
+                        android:gravity="center" />
+
+                    <com.zsxy.controls.ZsxyTextView
+                        android:id="@+id/mon10"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/course_height"
+                        android:layout_weight="1.0"
+                        android:gravity="center" />
+
+                    <com.zsxy.controls.ZsxyTextView
+                        android:id="@+id/mon11"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/course_height"
+                        android:layout_weight="1.0"
+                        android:gravity="center" />
+
+                    <com.zsxy.controls.ZsxyTextView
+                        android:id="@+id/mon12"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/course_height"
+                        android:layout_weight="1.0"
+                        android:gravity="center" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/TuesLayout"
+                    android:layout_width="@dimen/weeks_width"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:orientation="vertical" >
+
+                    <com.zsxy.controls.ZsxyTextView
+                        android:id="@+id/Tues1"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/course_height"
+                        android:layout_weight="1.0"
+                        android:gravity="center" />
+
+                    <com.zsxy.controls.ZsxyTextView
+                        android:id="@+id/Tues2"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/course_height"
+                        android:layout_weight="1.0"
+                        android:gravity="center" />
+
+                    <com.zsxy.controls.ZsxyTextView
+                        android:id="@+id/Tues3"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/course_height"
+                        android:layout_weight="1.0"
+                        android:gravity="center" />
+
+                    <com.zsxy.controls.ZsxyTextView
+                        android:id="@+id/Tues4"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/course_height"
+                        android:layout_weight="1.0"
+                        android:gravity="center" />
+
+                    <com.zsxy.controls.ZsxyTextView
+                        android:id="@+id/Tues5"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/course_height"
+                        android:layout_weight="1.0"
+                        android:gravity="center" />
+
+                    <com.zsxy.controls.ZsxyTextView
+                        android:id="@+id/Tues6"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/course_height"
+                        android:layout_weight="1.0"
+                        android:gravity="center" />
+
+                    <com.zsxy.controls.ZsxyTextView
+                        android:id="@+id/Tues7"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/course_height"
+                        android:layout_weight="1.0"
+                        android:gravity="center" />
+
+                    <com.zsxy.controls.ZsxyTextView
+                        android:id="@+id/Tues8"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/course_height"
+                        android:layout_weight="1.0"
+                        android:gravity="center" />
+
+                    <com.zsxy.controls.ZsxyTextView
+                        android:id="@+id/Tues9"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/course_height"
+                        android:layout_weight="1.0"
+                        android:gravity="center" />
+
+                    <com.zsxy.controls.ZsxyTextView
+                        android:id="@+id/Tues10"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/course_height"
+                        android:layout_weight="1.0"
+                        android:gravity="center" />
+
+                    <com.zsxy.controls.ZsxyTextView
+                        android:id="@+id/Tues11"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/course_height"
+                        android:layout_weight="1.0"
+                        android:gravity="center" />
+
+                    <com.zsxy.controls.ZsxyTextView
+                        android:id="@+id/Tues12"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/course_height"
+                        android:layout_weight="1.0"
+                        android:gravity="center" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/WedLayout"
+                    android:layout_width="@dimen/weeks_width"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:orientation="vertical" >
+
+                    <com.zsxy.controls.ZsxyTextView
+                        android:id="@+id/Wed1"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/course_height"
+                        android:layout_weight="1.0"
+                        android:gravity="center" />
+
+                    <com.zsxy.controls.ZsxyTextView
+                        android:id="@+id/Wed2"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/course_height"
+                        android:layout_weight="1.0"
+                        android:gravity="center" />
+
+                    <com.zsxy.controls.ZsxyTextView
+                        android:id="@+id/Wed3"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/course_height"
+                        android:layout_weight="1.0"
+                        android:gravity="center" />
+
+                    <com.zsxy.controls.ZsxyTextView
+                        android:id="@+id/Wed4"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/course_height"
+                        android:layout_weight="1.0"
+                        android:gravity="center" />
+
+                    <com.zsxy.controls.ZsxyTextView
+                        android:id="@+id/Wed5"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/course_height"
+                        android:layout_weight="1.0"
+                        android:gravity="center" />
+
+                    <com.zsxy.controls.ZsxyTextView
+                        android:id="@+id/Wed6"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/course_height"
+                        android:layout_weight="1.0"
+                        android:gravity="center" />
+
+                    <com.zsxy.controls.ZsxyTextView
+                        android:id="@+id/Wed7"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/course_height"
+                        android:layout_weight="1.0"
+                        android:gravity="center" />
+
+                    <com.zsxy.controls.ZsxyTextView
+                        android:id="@+id/Wed8"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/course_height"
+                        android:layout_weight="1.0"
+                        android:gravity="center" />
+
+                    <com.zsxy.controls.ZsxyTextView
+                        android:id="@+id/Wed9"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/course_height"
+                        android:layout_weight="1.0"
+                        android:gravity="center" />
+
+                    <com.zsxy.controls.ZsxyTextView
+                        android:id="@+id/Wed10"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/course_height"
+                        android:layout_weight="1.0"
+                        android:gravity="center" />
+
+                    <com.zsxy.controls.ZsxyTextView
+                        android:id="@+id/Wed11"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/course_height"
+                        android:layout_weight="1.0"
+                        android:gravity="center" />
+
+                    <com.zsxy.controls.ZsxyTextView
+                        android:id="@+id/Wed12"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/course_height"
+                        android:layout_weight="1.0"
+                        android:gravity="center" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ThurLayout"
+                    android:layout_width="@dimen/weeks_width"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:orientation="vertical" >
+
+                    <com.zsxy.controls.ZsxyTextView
+                        android:id="@+id/Thur1"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/course_height"
+                        android:layout_weight="1.0"
+                        android:gravity="center" />
+
+                    <com.zsxy.controls.ZsxyTextView
+                        android:id="@+id/Thur2"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/course_height"
+                        android:layout_weight="1.0"
+                        android:gravity="center" />
+
+                    <com.zsxy.controls.ZsxyTextView
+                        android:id="@+id/Thur3"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/course_height"
+                        android:layout_weight="1.0"
+                        android:gravity="center" />
+
+                    <com.zsxy.controls.ZsxyTextView
+                        android:id="@+id/Thur4"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/course_height"
+                        android:layout_weight="1.0"
+                        android:gravity="center" />
+
+                    <com.zsxy.controls.ZsxyTextView
+                        android:id="@+id/Thur5"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/course_height"
+                        android:layout_weight="1.0"
+                        android:gravity="center" />
+
+                    <com.zsxy.controls.ZsxyTextView
+                        android:id="@+id/Thur6"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/course_height"
+                        android:layout_weight="1.0"
+                        android:gravity="center" />
+
+                    <com.zsxy.controls.ZsxyTextView
+                        android:id="@+id/Thur7"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/course_height"
+                        android:layout_weight="1.0"
+                        android:gravity="center" />
+
+                    <com.zsxy.controls.ZsxyTextView
+                        android:id="@+id/Thur8"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/course_height"
+                        android:layout_weight="1.0"
+                        android:gravity="center" />
+
+                    <com.zsxy.controls.ZsxyTextView
+                        android:id="@+id/Thur9"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/course_height"
+                        android:layout_weight="1.0"
+                        android:gravity="center" />
+
+                    <com.zsxy.controls.ZsxyTextView
+                        android:id="@+id/Thur10"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/course_height"
+                        android:layout_weight="1.0"
+                        android:gravity="center" />
+
+                    <com.zsxy.controls.ZsxyTextView
+                        android:id="@+id/Thur11"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/course_height"
+                        android:layout_weight="1.0"
+                        android:gravity="center" />
+
+                    <com.zsxy.controls.ZsxyTextView
+                        android:id="@+id/Thur12"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/course_height"
+                        android:layout_weight="1.0"
+                        android:gravity="center" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/FriLayout"
+                    android:layout_width="@dimen/weeks_width"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:orientation="vertical" >
+
+                    <com.zsxy.controls.ZsxyTextView
+                        android:id="@+id/Fri1"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/course_height"
+                        android:layout_weight="1.0"
+                        android:gravity="center" />
+
+                    <com.zsxy.controls.ZsxyTextView
+                        android:id="@+id/Fri2"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/course_height"
+                        android:layout_weight="1.0"
+                        android:gravity="center" />
+
+                    <com.zsxy.controls.ZsxyTextView
+                        android:id="@+id/Fri3"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/course_height"
+                        android:layout_weight="1.0"
+                        android:gravity="center" />
+
+                    <com.zsxy.controls.ZsxyTextView
+                        android:id="@+id/Fri4"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/course_height"
+                        android:layout_weight="1.0"
+                        android:gravity="center" />
+
+                    <com.zsxy.controls.ZsxyTextView
+                        android:id="@+id/Fri5"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/course_height"
+                        android:layout_weight="1.0"
+                        android:gravity="center" />
+
+                    <com.zsxy.controls.ZsxyTextView
+                        android:id="@+id/Fri6"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/course_height"
+                        android:layout_weight="1.0"
+                        android:gravity="center" />
+
+                    <com.zsxy.controls.ZsxyTextView
+                        android:id="@+id/Fri7"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/course_height"
+                        android:layout_weight="1.0"
+                        android:gravity="center" />
+
+                    <com.zsxy.controls.ZsxyTextView
+                        android:id="@+id/Fri8"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/course_height"
+                        android:layout_weight="1.0"
+                        android:gravity="center" />
+
+                    <com.zsxy.controls.ZsxyTextView
+                        android:id="@+id/Fri9"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/course_height"
+                        android:layout_weight="1.0"
+                        android:gravity="center" />
+
+                    <com.zsxy.controls.ZsxyTextView
+                        android:id="@+id/Fri10"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/course_height"
+                        android:layout_weight="1.0"
+                        android:gravity="center" />
+
+                    <com.zsxy.controls.ZsxyTextView
+                        android:id="@+id/Fri11"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/course_height"
+                        android:layout_weight="1.0"
+                        android:gravity="center" />
+
+                    <com.zsxy.controls.ZsxyTextView
+                        android:id="@+id/Fri12"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/course_height"
+                        android:layout_weight="1.0"
+                        android:gravity="center" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/SatLayout"
+                    android:layout_width="@dimen/weeks_width"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:orientation="vertical" >
+
+                    <com.zsxy.controls.ZsxyTextView
+                        android:id="@+id/Sat1"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/course_height"
+                        android:layout_weight="1.0"
+                        android:gravity="center" />
+
+                    <com.zsxy.controls.ZsxyTextView
+                        android:id="@+id/Sat2"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/course_height"
+                        android:layout_weight="1.0"
+                        android:gravity="center" />
+
+                    <com.zsxy.controls.ZsxyTextView
+                        android:id="@+id/Sat3"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/course_height"
+                        android:layout_weight="1.0"
+                        android:gravity="center" />
+
+                    <com.zsxy.controls.ZsxyTextView
+                        android:id="@+id/Sat4"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/course_height"
+                        android:layout_weight="1.0"
+                        android:gravity="center" />
+
+                    <com.zsxy.controls.ZsxyTextView
+                        android:id="@+id/Sat5"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/course_height"
+                        android:layout_weight="1.0"
+                        android:gravity="center" />
+
+                    <com.zsxy.controls.ZsxyTextView
+                        android:id="@+id/Sat6"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/course_height"
+                        android:layout_weight="1.0"
+                        android:gravity="center" />
+
+                    <com.zsxy.controls.ZsxyTextView
+                        android:id="@+id/Sat7"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/course_height"
+                        android:layout_weight="1.0"
+                        android:gravity="center" />
+
+                    <com.zsxy.controls.ZsxyTextView
+                        android:id="@+id/Sat8"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/course_height"
+                        android:layout_weight="1.0"
+                        android:gravity="center" />
+
+                    <com.zsxy.controls.ZsxyTextView
+                        android:id="@+id/Sat9"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/course_height"
+                        android:layout_weight="1.0"
+                        android:gravity="center" />
+
+                    <com.zsxy.controls.ZsxyTextView
+                        android:id="@+id/Sat10"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/course_height"
+                        android:layout_weight="1.0"
+                        android:gravity="center" />
+
+                    <com.zsxy.controls.ZsxyTextView
+                        android:id="@+id/Sat11"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/course_height"
+                        android:layout_weight="1.0" />
+
+                    <com.zsxy.controls.ZsxyTextView
+                        android:id="@+id/Sat12"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/course_height"
+                        android:layout_weight="1.0" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/SunLayout"
+                    android:layout_width="@dimen/weeks_width"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:orientation="vertical" >
+
+                    <com.zsxy.controls.ZsxyTextView
+                        android:id="@+id/Sun1"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/course_height"
+                        android:layout_weight="1.0"
+                        android:gravity="center" />
+
+                    <com.zsxy.controls.ZsxyTextView
+                        android:id="@+id/Sun2"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/course_height"
+                        android:layout_weight="1.0"
+                        android:gravity="center" />
+
+                    <com.zsxy.controls.ZsxyTextView
+                        android:id="@+id/Sun3"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/course_height"
+                        android:layout_weight="1.0"
+                        android:gravity="center" />
+
+                    <com.zsxy.controls.ZsxyTextView
+                        android:id="@+id/Sun4"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/course_height"
+                        android:layout_weight="1.0"
+                        android:gravity="center" />
+
+                    <com.zsxy.controls.ZsxyTextView
+                        android:id="@+id/Sun5"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/course_height"
+                        android:layout_weight="1.0"
+                        android:gravity="center" />
+
+                    <com.zsxy.controls.ZsxyTextView
+                        android:id="@+id/Sun6"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/course_height"
+                        android:layout_weight="1.0"
+                        android:gravity="center" />
+
+                    <com.zsxy.controls.ZsxyTextView
+                        android:id="@+id/Sun7"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/course_height"
+                        android:layout_weight="1.0"
+                        android:gravity="center" />
+
+                    <com.zsxy.controls.ZsxyTextView
+                        android:id="@+id/Sun8"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/course_height"
+                        android:layout_weight="1.0"
+                        android:gravity="center" />
+
+                    <com.zsxy.controls.ZsxyTextView
+                        android:id="@+id/Sun9"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/course_height"
+                        android:layout_weight="1.0"
+                        android:gravity="center" />
+
+                    <com.zsxy.controls.ZsxyTextView
+                        android:id="@+id/Sun10"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/course_height"
+                        android:layout_weight="1.0"
+                        android:gravity="center" />
+
+                    <com.zsxy.controls.ZsxyTextView
+                        android:id="@+id/Sun11"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/course_height"
+                        android:layout_weight="1.0"
+                        android:gravity="center" />
+
+                    <com.zsxy.controls.ZsxyTextView
+                        android:id="@+id/Sun12"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/course_height"
+                        android:layout_weight="1.0"
+                        android:gravity="center" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

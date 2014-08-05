@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:background="#66cc33" >
+        
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center" 
+            android:text="计算机网络"
+            android:textColor="#ffffff"
+            android:textSize="20dp"/>
+        
+	</LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <TableLayout
+            android:layout_width="300dp"
+            android:layout_height="fill_parent"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="43dp" >
+            
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="40dp" >
+                
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="课堂信息："
+                    android:textColor="#ffffff"
+                    android:textSize="15sp" 
+                    android:background="#339933"/>
+                
+                <TextView
+                    android:layout_width="1dp"
+                    android:layout_height="fill_parent" />
+
+                <TextView
+                    android:layout_width="200dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="5"
+                    android:gravity="center"
+                    android:background="#339933" />
+
+			</TableRow>
+			
+            
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="20dp" >
+                
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="20dp" />
+                
+                
+            </TableRow>
+            
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="40dp" >
+                
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="名称："
+                    android:textColor="#ffffff"
+                    android:textSize="15sp" 
+                    android:background="#339933"/>
+                
+                <TextView
+                    android:layout_width="1dp"
+                    android:layout_height="fill_parent" />
+
+                <TextView
+                    android:id="@+id/lesson_name"
+                    android:layout_width="200dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="5"
+                    android:background="#FFFFCC"
+                    android:gravity="center"
+                    android:text="计算机网络"
+                    android:textColor="#339933" />
+
+			</TableRow>
+			
+            
+             <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="1dp" >
+                
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp" />
+                
+            </TableRow>
+            
+             
+             <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="40dp" >
+                
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="教室："
+                    android:textColor="#ffffff"
+                    android:textSize="15sp" 
+                    android:background="#339933"/>
+                
+                <TextView
+                    android:layout_width="1dp"
+                    android:layout_height="fill_parent" />
+
+                <TextView
+                    android:id="@+id/classroom"
+                    android:layout_width="200dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="5"
+                    android:background="#FFFFCC"
+                    android:gravity="center"
+                    android:text="A1104"
+                    android:textColor="#339933" />
+
+			</TableRow>
+			
+            
+             <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="1dp" >
+                
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp" />
+                
+            </TableRow>
+            
+             
+             <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="40dp" >
+                
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="老师："
+                    android:textColor="#ffffff"
+                    android:textSize="15sp" 
+                    android:background="#339933"/>
+                
+                <TextView
+                    android:layout_width="1dp"
+                    android:layout_height="fill_parent" />
+
+                <TextView
+                    android:id="@+id/teacher"
+                    android:layout_width="200dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="5"
+                    android:background="#FFFFCC"
+                    android:gravity="center"
+                    android:text="黄敏"
+                    android:textColor="#339933" />
+
+			</TableRow>
+			
+            
+             <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="1dp" >
+                
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp" />
+                
+            </TableRow>
+            
+             
+             <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="40dp" >
+                
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="节数："
+                    android:textColor="#ffffff"
+                    android:textSize="15sp" 
+                    android:background="#339933"/>
+                
+                <TextView
+                    android:layout_width="1dp"
+                    android:layout_height="fill_parent" />
+
+                <TextView
+                    android:id="@+id/lesson_number"
+                    android:layout_width="200dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="5"
+                    android:background="#FFFFCC"
+                    android:gravity="center"
+                    android:text="周四 1-2节"
+                    android:textColor="#339933" />
+
+			</TableRow>
+			
+            
+             <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="1dp" >
+                
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp" />
+                
+            </TableRow>
+            
+             
+             <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="40dp" >
+                
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="周数："
+                    android:textColor="#ffffff"
+                    android:textSize="15sp" 
+                    android:background="#339933"/>
+                
+                <TextView
+                    android:layout_width="1dp"
+                    android:layout_height="fill_parent" />
+
+                <TextView
+                    android:id="@+id/week_number"
+                    android:layout_width="200dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="5"
+                    android:background="#FFFFCC"
+                    android:gravity="center"
+                    android:text="第二周"
+                    android:textColor="#339933" />
+
+			</TableRow>
+			
+            
+             <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="1dp" >
+                
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp" />
+                
+            </TableRow>
+
+            
+        </TableLayout>
+        
+    </RelativeLayout>
+
+</LinearLayout>

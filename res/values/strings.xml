@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">ZDS_ZSXY</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="second_activity">Login</string>
+    <string name="menu_settings">Settings</string>
+
+    <!-- 课表界面的字符串资源 -->
+    <string name = "schedule">我</string>
+    <string name="schedule_login_title">连接教务系统，更新至最新课表</string>
+    <string name="schedule_login_text1">学号：</string>
+    <string name="schedule_login_text2">密码：</string>
+    <string name="schedule_login_submit">确定</string>
+    <string name="schedule_login_cancel">取消</string>
+    <string name="one">1</string>
+    <string name="two">2</string>
+    <string name="three">3</string>
+    <string name="four">4</string>
+    <string name="five">5</string>
+    <string name="six">6</string>
+    <string name="seven">7</string>
+    <string name="eight">8</string>
+    <string name="nine">9</string>
+    <string name="ten">10</string>
+    <string name="eleven">11</string>
+    <string name="twelve">12</string>
+    <string name="search_sorce">查成绩</string>
+    <string name="homework">作业</string>
+    <string name="educational_notification">教务通知</string>
+    <string name="partner">小伙伴</string>
+    <string name="set">设置</string>
+    <string name="mon">周一</string>
+    <string name="tue">周二</string>
+    <string name="web">周三</string>
+    <string name="thu">周四</string>
+    <string name="fri">周五</string>
+    <string name="sat">周六</string>
+    <string name="sun">周日</string>
+
+    <!-- 门户界面的字符串资源 -->
+    <string name="portal">门户</string>
+
+    <!-- 发现界面的字符串资源 -->
+    <string name="discovery">发现</string>
+
+    <!-- 服务界面的字符串资源 -->
+    <string name="service">服务</string>
+
+</resources>

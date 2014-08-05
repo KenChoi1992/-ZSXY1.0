@@ -1,0 +1,92 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_vertical"
+    android:layout_margin="20dip"
+    android:background="@drawable/corner"
+    android:orientation="vertical"
+    tools:context=".LoginActivity" >
+
+    <TextView
+        android:id="@+id/login_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dip"
+        android:gravity="top"
+        android:textColor="@color/black"
+        android:text="@string/schedule_login_title" />
+
+    <LinearLayout
+        android:id="@+id/linearLayoutId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/login_title"
+        android:layout_marginTop="20dip" >
+
+        <TextView
+            android:id="@+id/label1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="20dip"
+            android:text="@string/schedule_login_text1"
+            android:textColor="@color/green" />
+
+        <EditText
+            android:id="@+id/studentId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="20dip"
+            android:ems="10"
+            android:inputType="number" >
+        </EditText>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linearLayoutId"
+        android:layout_marginTop="20dip" >
+
+        <TextView
+            android:id="@+id/label2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="20dip"
+            android:text="@string/schedule_login_text2"
+            android:textColor="@color/green" />
+
+        <EditText
+            android:id="@+id/studentPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="20dip"
+            android:ems="10"
+            android:inputType="textPassword" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/login_submit"
+        android:layout_width="70dip"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linearLayoutPassword"
+        android:layout_marginLeft="55dip"
+        android:layout_marginTop="20dip"
+        android:text="@string/schedule_login_submit" />
+
+    <Button
+        android:id="@+id/login_cancel"
+        android:layout_width="70dip"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/login_submit"
+        android:layout_marginLeft="40dip"
+        android:layout_toRightOf="@+id/login_submit"
+        android:text="@string/schedule_login_cancel" />
+
+</RelativeLayout>

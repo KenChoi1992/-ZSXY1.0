@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ZsxyTextView="http://schemas.android.com/apk/res/com.zds_zsxy"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <com.zsxy.controls.ZsxyTextView
+        android:id="@+id/search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center_horizontal"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:text="@string/search_sorce" />
+
+    <com.zsxy.controls.ZsxyTextView
+        android:id="@+id/homework"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        ZsxyTextView:topBorder="false"
+        android:background="@color/white"
+        android:gravity="center_horizontal"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:text="@string/homework" />
+
+    <com.zsxy.controls.ZsxyTextView
+        android:id="@+id/notification"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        ZsxyTextView:topBorder="false"
+        android:background="@color/white"
+        android:gravity="center_horizontal"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:text="@string/educational_notification" />
+
+    <com.zsxy.controls.ZsxyTextView
+        android:id="@+id/partner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        ZsxyTextView:topBorder="false"
+        android:background="@color/white"
+        android:gravity="center_horizontal"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:text="@string/partner" />
+
+    <com.zsxy.controls.ZsxyTextView
+        android:id="@+id/set"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        ZsxyTextView:topBorder="false"
+        android:background="@color/white"
+        android:gravity="center_horizontal"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:text="@string/set" />
+
+</LinearLayout>
